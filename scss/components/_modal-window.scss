@@ -1,0 +1,232 @@
+/* Modal window */
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    transition: opacity var(--time-func), visibility var(--time-func);
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+    & .modal-wrapper {
+        transform: translate(-50%, -50%) scale(.8);
+    }
+}
+
+
+.backdrop .modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform var(--time-func);
+}
+
+
+.modal-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #FFFFFF;
+
+    cursor: pointer;
+
+    transition: color var(--time-func);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.icon-close {
+    fill: currentColor;
+}
+
+
+/* Styles for modal form */
+
+.form-title {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 12px;
+}
+
+.form-modal-group {
+    display: block;
+    position: relative;
+
+    margin-bottom: 10px;
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    top: 11px;
+
+    fill: currentColor;
+    pointer-events: none;
+}
+
+.form-modal-label {
+    display: block;
+    margin-bottom: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: var(--second-text-color);
+}
+
+
+.form-modal-comment {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.form-modal-input,
+.form-modal-textarea {
+    width: 100%;
+    height: 40px;
+    padding-left: 32px;
+    padding-right: 10px;
+    
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color var(--time-func);
+    
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        cursor: pointer;
+        outline: transparent;
+    }
+
+    &:hover+.form-icon {
+        fill: var(--accent-color);
+    }
+    
+    &+.form-icon {
+        transition: fill var(--time-func);
+    }
+}
+
+
+.form-modal-textarea {
+    height: 120px;
+    resize: none;
+    padding: 12px 16px;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+    
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.checkbox-group {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form-modal-agree {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
+    cursor: pointer;
+
+}
+
+.custom-check {
+    width: 16px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+
+    outline: 2px solid var(--main-text-color);
+    outline-offset: -2px;
+
+    border-radius: 4px;
+    transition: background-color var(--time-func), outline var(--time-func);
+}
+
+.check-standard+.custom-check .check-icon {
+    opacity: 0;
+    transition: opacity var(--time-func);
+    fill: #FFFFFF;
+}
+
+.check-standard:checked+.custom-check {
+    background-color: var(--accent-color);
+    outline-color: var(--accent-color);
+}
+
+.check-standard:checked+.custom-check .check-icon {
+    opacity: 1;
+}
+
+.check-standard:focus+.custom-check {
+    outline-color: var(--accent-color);
+}
+
+.check-standard:focus:checked+.custom-check {
+    outline-color: var(--main-text-color);
+}
+
+
+.agree-href {
+    color: var(--accent-color);
+    text-decoration-line: underline;
+}
+
+.modal-form .form-btn {
+    padding: 10px 55px;
+}

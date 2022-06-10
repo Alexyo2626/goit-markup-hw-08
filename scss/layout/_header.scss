@@ -1,0 +1,88 @@
+/* Styles for header */
+
+.navigation,
+.contacts {
+    display: flex;
+}
+
+.navigation__list {
+    display: flex;
+    padding-left: 0;
+    align-items: center;
+}
+
+
+.header__container {
+    display: flex;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.navigation__item,
+.contacts__item {
+    display: block;
+    padding: 32px 0;
+    margin: 0;
+    
+    color: currentColor;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    
+    transition: color var(--time-func);
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.contacts {
+    margin-left: auto;
+    align-items: center;
+}
+
+.contacts__item:first-child {
+    margin-right: 50px;
+}
+
+.navigation__link,
+.contacts__link {
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.navigation__item {
+    position: relative;
+}
+
+.navigation__link.current {
+    color: var(--accent-color);
+}
+
+.navigation__link.current::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    background-color: var(--accent-color);
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+
+    color: var(--second-text-color);
+}
+
+.contacts__icon {
+    fill: currentColor;
+    margin-right: 10px;
+}
