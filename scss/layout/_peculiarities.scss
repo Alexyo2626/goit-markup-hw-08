@@ -1,17 +1,26 @@
 /* Styles for peculiarities */
 
 .peculiarities__group {
-    display: flex;
-}
+    @include mq(tablet) {
+        display: flex;
+        margin: -15px;
+    }
 
-.peculiarities__item {
-    width: 270px;
-
-    &:not(:last-child) {
-        margin-right: 30px;
+    @include mq(tablet-only) {
+        flex-wrap: wrap;
     }
 }
 
+.peculiarities__item {
+    @include mq(mobile) {
+        width: 100%;
+    }
+
+    @include mq(tablet) {
+        flex-basis: calc((100% - 4 * 15px) / 2);
+        margin: 15px;
+    }
+}
 
 .peculiarities__title {
     margin-bottom: 10px;
@@ -21,6 +30,10 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @include mq(mobile-only) {
+        text-align: center;
+    }
 }
 
 .peculiarities__text {
