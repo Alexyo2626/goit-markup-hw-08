@@ -2,6 +2,10 @@
 
 .what-doing {
     padding-top: 0;
+
+    @include mq(not-desktop) {
+        display: none;
+    }
 }
 
 .what-doing__group {
