@@ -779,23 +779,32 @@ ul {
 }
 
 /* Regular customers */
-.customers {
-  padding: 94px 0px;
-}
-
 .customers__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: -15px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .customers__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .customers__item {
-  width: 170px;
   height: 92px;
+  -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
+      flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
 }
 
-.customers__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .customers__item {
+    -ms-flex-preferred-size: calc((100% - 6 * 15px) / 3);
+        flex-basis: calc((100% - 6 * 15px) / 3);
+  }
 }
 
 .customers__link {
