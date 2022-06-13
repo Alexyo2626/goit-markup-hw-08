@@ -7,8 +7,11 @@
 }
 
 .bottom .logo {
-    display: inline-block;
     margin-bottom: 20px;
+    
+    @include mq(not-desktop) {
+        text-align: center;        
+    }
 }
 
 .bottom .text {
@@ -24,6 +27,17 @@
 .address {
     font-style: normal;
 }
+
+@include mq(not-desktop) {
+    .address .text {
+            text-align: center;
+        }
+    
+    .address .item {
+        text-align: center;
+    }
+}
+
 
 .address .item:first-child {
     margin-bottom: 9px;
@@ -43,20 +57,46 @@
     }
 }
 
+.container-footer {
+    @include mq(not-desktop) {
+        margin-bottom: 60px;
+    }
+    
+    @include mq(desktop) {
+        margin-right: 70px;
+    }
+   
+}
 /* Join */
 
+.tablet-container {
+    @include mq(tablet) {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
+
+}
+
 .join {
+    @include mq(not-desktop) {
+        margin-bottom: 60px;
+    }
+
+    @include mq(desktop) {
     margin-right: auto;
+    }
 }
 
 .wrap-footer {
-    display: flex;
-    align-items: baseline;
+    @include mq(desktop) {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
 }
 
-.container-footer {
-    margin-right: 70px;
-}
 
 .join .text,
 .subscription-title {
@@ -68,6 +108,11 @@
     margin-bottom: 20px;
 
     color: #FFFFFF;
+
+    @include mq(not-desktop) {
+        text-align: center;
+    }
+    
 }
 
 .bottom .socials-link {
@@ -85,24 +130,44 @@
 
 /* Form */
 
+
 .subscription-title {
     display: block;
 }
 
 
 .form-wrap {
-    display: flex;
+    @include mq(desktop) {
+        display: flex;
+    }
+    
 }
 
 .subscription-input {
-    margin-right: 12px;
     padding: 15px 16px;
-    width: 358px;
+    width: 100%;
     background-color: transparent;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
+
+    @include mq(not-desktop) {
+        margin-bottom: 20px;
+    }
+
+    @include mq(tablet-only) {
+        width: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include mq(desktop) {
+        width: 358px;
+        margin-right: 12px;
+        margin-bottom: 0;
+    }
 }
 
 .footer-btn {
