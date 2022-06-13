@@ -93,6 +93,12 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .logo {
   display: block;
   color: var(--accent-color);
@@ -741,12 +747,6 @@ ul {
   }
 }
 
-.team-group img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
 .team-group .item {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
@@ -772,12 +772,20 @@ ul {
 
 .team .title,
 .customers__title {
-  margin-bottom: 50px;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 1280px) {
+  .team .title,
+  .customers__title {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
 }
 
 .team .subtitle {
@@ -799,6 +807,12 @@ ul {
 
 .team .subtext {
   padding: 30px 15px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .team .subtext {
+    padding-bottom: 24px;
+  }
 }
 
 /* Regular customers */

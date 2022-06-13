@@ -229,11 +229,38 @@
           <h2 class="title">Наша команда</h2>
           <ul class="list team-group">
             <li class="item">
-              <img
-                src="./images/mainpage-img/teamcard1.jpg"
-                alt="фото Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard1_large.jpg    1x,
+                    ./images/mainpage-img/teamcard1_large@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard1_middle.jpg    1x,
+                    ./images/mainpage-img/teamcard1_middle@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard1_small.jpg    1x,
+                    ./images/mainpage-img/teamcard1_small@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/mainpage-img/teamcard1_small.jpg"
+                  alt="фото Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="subtext">
                 <h3 class="subtitle">Игорь Демьяненко</h3>
                 <p class="text" lang="en">Product Designer</p>
@@ -294,7 +321,38 @@
               </div>
             </li>
             <li class="item">
-              <img src="./images/mainpage-img/teamcard2.jpg" alt="фото Ольга Репина" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard2_large.jpg    1x,
+                    ./images/mainpage-img/teamcard2_large@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard2_middle.jpg    1x,
+                    ./images/mainpage-img/teamcard2_middle@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard2_small.jpg    1x,
+                    ./images/mainpage-img/teamcard2_small@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/mainpage-img/teamcard2_small.jpg"
+                  alt="фото Ольга Репина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="subtext">
                 <h3 class="subtitle">Ольга Репина</h3>
                 <p class="text" lang="en">Frontend Developer</p>
@@ -355,11 +413,39 @@
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/mainpage-img/teamcard3.jpg"
-                alt="фото Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard3_large.jpg    1x,
+                    ./images/mainpage-img/teamcard3_large@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard3_middle.jpg    1x,
+                    ./images/mainpage-img/teamcard3_middle@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard3_small.jpg    1x,
+                    ./images/mainpage-img/teamcard3_small@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/mainpage-img/teamcar3_small.jpg"
+                  alt="фото Николай Тарасов"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="subtext">
                 <h3 class="subtitle">Николай Тарасов</h3>
                 <p class="text" lang="en">Marketing</p>
@@ -420,11 +506,38 @@
               </div>
             </li>
             <li class="item">
-              <img
-                src="./images/mainpage-img/teamcard4.jpg"
-                alt="фото Михаил Ермаков"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1280px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard4_large.jpg    1x,
+                    ./images/mainpage-img/teamcard4_large@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard4_middle.jpg    1x,
+                    ./images/mainpage-img/teamcard4_middle@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/mainpage-img/teamcard4_small.jpg    1x,
+                    ./images/mainpage-img/teamcard4_small@2x.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/mainpage-img/teamcar4_small.jpg"
+                  alt="фото Михаил Ермаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
               <div class="subtext">
                 <h3 class="subtitle">Михаил Ермаков</h3>
                 <p class="text" lang="en">UI Designer</p>
@@ -489,7 +602,7 @@
       </section>
 
       <!-- Regular customers  -->
-      <section class="customers">
+      <section class="customers section">
         <div class="container">
           <h2 class="customers__title">Постоянные клиенты</h2>
           <ul class="customers__list">
