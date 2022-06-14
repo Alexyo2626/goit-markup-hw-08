@@ -9,9 +9,18 @@
     font-size: 26px;
     letter-spacing: 0.03em;
 
+    @include mq(mobile-only) {
+            font-size: 24px;
+        }
+
     &__header {
         padding: 24px 0;
         margin-right: 93px;
+
+        @include mq(mobile-only) {
+                padding: 16px 0;
+                margin-right: 0;
+            }
     }
     
     

@@ -108,9 +108,22 @@ img {
   letter-spacing: 0.03em;
 }
 
+@media screen and (max-width: 767.98px) {
+  .logo {
+    font-size: 24px;
+  }
+}
+
 .logo__header {
   padding: 24px 0;
   margin-right: 93px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .logo__header {
+    padding: 16px 0;
+    margin-right: 0;
+  }
 }
 
 .logo__header--black {
@@ -500,6 +513,12 @@ img {
           align-items: center;
 }
 
+@media screen and (max-width: 767.98px) {
+  .navigation__list {
+    display: none;
+  }
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,13 +551,32 @@ img {
           align-items: center;
 }
 
-.contacts__item:first-child {
-  margin-right: 50px;
+@media screen and (max-width: 767.98px) {
+  .contacts {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .contacts {
+    display: block;
+    padding: 15px 0;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__item:first-child {
+    margin-right: 50px;
+  }
 }
 
 .navigation__link:hover, .navigation__link:focus,
 .contacts__link:hover,
 .contacts__link:focus {
+  color: var(--accent-color);
+}
+
+.navigation__item:hover .navigation__link {
   color: var(--accent-color);
 }
 
@@ -575,6 +613,41 @@ img {
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .wrap-mob-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrap-mob-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .wrap-mob-menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .contacts__item {
+    font-size: 12px;
+    line-height: 1.16;
+    padding: 5px 0;
+  }
 }
 
 /* Styles for hero */
@@ -627,7 +700,7 @@ img {
 }
 
 .hero .title {
-  width: 360px;
+  max-width: 360px;
   margin: 0 auto;
   margin-bottom: 30px;
   color: #ffffff;
@@ -641,7 +714,7 @@ img {
 
 @media screen and (min-width: 1280px) {
   .hero .title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
