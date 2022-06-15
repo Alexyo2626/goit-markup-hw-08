@@ -10,6 +10,8 @@
     z-index: 10;
 
     transition: opacity var(--time-func), visibility var(--time-func);
+
+
 }
 
 .backdrop.is-hidden {
@@ -28,8 +30,8 @@
     top: 50%;
     left: 50%;
 
-    width: 528px;
-    height: 581px;
+    max-width: 95%;
+    // height: 581px;
     padding: 40px;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -37,6 +39,13 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: transform var(--time-func);
+
+    @include mq(not-desktop) {
+        width: 450px;
+    }
+    @include mq(desktop) {
+        width: 528px;
+    }
 }
 
 
@@ -180,6 +189,11 @@
     letter-spacing: 0.03em;
     color: var(--second-text-color);
     cursor: pointer;
+
+    @include mq(not-desktop) {
+        font-size: 12px;
+        line-height: 1.66;
+    }
 
 }
 

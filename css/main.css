@@ -210,8 +210,7 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  max-width: 95%;
   padding: 40px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -223,6 +222,18 @@ img {
   transition: -webkit-transform var(--time-func);
   transition: transform var(--time-func);
   transition: transform var(--time-func), -webkit-transform var(--time-func);
+}
+
+@media screen and (max-width: 1279.98px) {
+  .backdrop .modal-wrapper {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .backdrop .modal-wrapper {
+    width: 528px;
+  }
 }
 
 .modal-btn {
@@ -396,6 +407,13 @@ img {
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   cursor: pointer;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .form-modal-agree {
+    font-size: 12px;
+    line-height: 1.66;
+  }
 }
 
 .custom-check {
