@@ -542,6 +542,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #ECECEC;
+  position: relative;
 }
 
 .navigation__item,
@@ -633,8 +634,30 @@ img {
   margin-right: 10px;
 }
 
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-close-mob-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-close-mob-menu {
+  display: block;
+}
+
+.menu-button.is-open .icon-open-mob-menu {
+  display: none;
+}
+
 @media screen and (max-width: 767.98px) {
-  .wrap-mob-menu {
+  .menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -649,13 +672,13 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .wrap-mob-menu {
+  .menu-button {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279.98px) {
-  .wrap-mob-menu {
+  .menu-button {
     display: none;
   }
 }
@@ -666,6 +689,65 @@ img {
     line-height: 1.16;
     padding: 5px 0;
   }
+}
+
+.mob-menu-container {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 48px 40px;
+}
+
+.mob-menu-container.is-open {
+  display: block;
+}
+
+.mob-menu-nav__item {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var() .mob-menu-nav__item __list;
+}
+
+.mob-menu-nav__item :not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-nav__link {
+  color: currentColor;
+}
+
+.mob-menu-contacts {
+  margin-bottom: 64px;
+}
+
+.mob-menu-contacts__item {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mob-menu-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-menu-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mob-menu-social__item {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
 }
 
 /* Styles for hero */
