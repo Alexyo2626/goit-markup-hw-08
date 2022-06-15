@@ -1,9 +1,12 @@
 /* Styles for header */
 
+.header {
+    position: relative;
+}
+
 .navigation,
 .contacts {
     display: flex;
-
 }
 
 .navigation__list {
@@ -19,7 +22,6 @@
 .header__container {
     display: flex;
     border-bottom: 1px solid #ECECEC;
-    position: relative;
 }
 
 .navigation__item,
@@ -137,9 +139,6 @@
         display: none;
     }
 
-    @include mq(tablet-only) {
-        display: none;
-    }
 }
 
     @include mq(tablet-only) {
@@ -148,64 +147,4 @@
         line-height: 1.16;
         padding: 5px 0;
 }
-}
-
-.mob-menu-container {
-    display: none;
-    position: absolute;
-    background-color: white;
-    top: 100%;
-    left: 0;
-    width: 100%;
-
-    padding: 48px 40px;
-
-    &.is-open {
-        display: block;
-    }
-}
-
-.mob-menu-nav {
-    &__item {
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-    }
-
-        &:not(:last-child) {
-            margin-bottom: 32px;
-        }
-    }
-    &__link {
-        color: currentColor;
-    }
-
-
-
-.mob-menu-contacts {
-    margin-bottom: 64px;
-    &__item {
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-
-        &:not(:last-child) {
-            margin-bottom: 32px;
-        }
-}
-}
-
-.mob-menu-social {
-    display: flex;
-
-    &__item {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 1.22;
-        letter-spacing: 0.02em;
-    
-        color: var(--accent-color);
-    }
 }
