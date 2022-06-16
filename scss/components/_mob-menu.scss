@@ -1,5 +1,6 @@
 .menu-button {
     z-index: 40;
+    cursor: pointer;
 }
 
 .mob-menu-container {
@@ -41,6 +42,11 @@
 
     &__link {
         color: currentColor;
+
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
     }
 }
 
@@ -62,6 +68,9 @@
             color: var(--accent-color);
         }
         &:last-child {
+            font-size: 24px;
+            line-height: 1.16;
+            letter-spacing: 0.02em;
             color: var(--second-text-color);
         }
     }
@@ -73,6 +82,7 @@
 
 .mob-menu-social {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
 
     &__item {
@@ -90,15 +100,18 @@
 }
 
 .mob-menu-social__item:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 20px;
 
 }
 .mob-menu-social__item:not(:last-child) .mob-menu-social__link::after {
+    position: relative;
     display: inline-block;
     content: '';
     width: 1px;
     height: 22px;
-    // background-color: rgba(33, 33, 33, 0.2);
-    background-color: red;
+    background-color: rgba(33, 33, 33, 0.2);
+
+    right: -10px;
+    bottom: -5px;
 
 }
